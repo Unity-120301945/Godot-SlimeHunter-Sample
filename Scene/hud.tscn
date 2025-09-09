@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpdfa57hs8eyq"]
+
+[ext_resource type="Script" uid="uid://bpegmsvxph0v5" path="res://Sprits/hud.gd" id="1_3quw2"]
+[ext_resource type="FontFile" uid="uid://cu0vjwbtjpxo8" path="res://AssetBundle/Uranus_Pixel_11Px.ttf" id="1_cevek"]
+[ext_resource type="AudioStream" uid="uid://btgxuoh8duqsi" path="res://AssetBundle/Audio/GameOver.mp3" id="3_fmoiy"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_3quw2")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 20.0
+offset_right = 79.0
+offset_bottom = 43.0
+scale = Vector2(2.35985, 2.7538)
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_cevek")
+theme_override_font_sizes/font_size = 18
+text = "Score：0"
+
+[node name="Game Over Label" type="Label" parent="."]
+visible = false
+offset_left = 235.0
+offset_top = 248.0
+offset_right = 810.0
+offset_bottom = 368.0
+scale = Vector2(1.08537, 1.19419)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.0588235, 0.521569, 0.172549, 1)
+theme_override_constants/outline_size = 60
+theme_override_fonts/font = ExtResource("1_cevek")
+theme_override_font_sizes/font_size = 120
+text = "Game Over!"
+
+[node name="Game Over Label2" type="Label" parent="Game Over Label"]
+offset_left = 129.91
+offset_top = 114.722
+offset_right = 1106.91
+offset_bottom = 234.722
+scale = Vector2(0.267954, 0.286908)
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.0588235, 0.521569, 0.172549, 1)
+theme_override_constants/outline_size = 60
+theme_override_fonts/font = ExtResource("1_cevek")
+theme_override_font_sizes/font_size = 120
+text = "Game By TravelFish"
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fmoiy")
+volume_db = 5.622
